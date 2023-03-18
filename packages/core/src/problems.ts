@@ -279,7 +279,7 @@ function getMessages(kind: ProblemKind, analysis: TypedAnalysis, problems: Probl
       const resolutionKinds =
         biggerGroups === groupedByResolutionKind
           ? [groupKey as ResolutionKind]
-          : biggerGroups[groupKey]!.map((p) => p.resolutionKind);
+          : biggerGroups[groupKey as keyof typeof biggerGroups]!.map((p) => p.resolutionKind);
       messages.push(
         msg((f) =>
           getMessageText(
