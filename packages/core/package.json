@@ -1,9 +1,10 @@
 {
-  "name": "core",
+  "name": "are-the-types-wrong-core",
   "version": "0.0.3",
   "private": true,
   "description": "",
   "type": "module",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "development": "./src/index.ts",
